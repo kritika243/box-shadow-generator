@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.controls {
+  width: 40vw;
+}
+
+.output-box {
+  text-align: center;
+  width: 40vw;
+  height: 50vh;
+  background-color: cadetblue;
+  color: white;
+}
+
+.controls p {
+  cursor: pointer;
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
