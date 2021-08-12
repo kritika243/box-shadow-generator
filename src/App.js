@@ -23,7 +23,6 @@ function App() {
             value={HorizontalLength}
             onChange={(e) => setHorizontalLength(e.target.value)}
           />
-
           <label>Vertical length</label>
           <input
             type='range'
@@ -40,20 +39,19 @@ function App() {
             value={Blur}
             onChange={(e) => setBlur(e.target.value)}
           />
-          <label>Color</label>
+          <br /> <br />
+          <label>Color </label>
           <input
             type='color'
             value={Color}
             onChange={(e) => setColor(e.target.value)}
           />
-
           <p>
             box-shadow: {HorizontalLength}px {VerticalLength}px {Blur}px {Color}
           </p>
           <CopyToClipboard text={val} onCopy={() => setCopied(true)}>
             <a class='waves-effect waves-light btn-small'>Copy CSS</a>
           </CopyToClipboard>
-          {/* {Copied ? (Copied = false) : (Copied = true)} */}
         </div>
         <div className='output'>
           <div
