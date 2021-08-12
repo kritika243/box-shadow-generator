@@ -1,4 +1,4 @@
-# Box Shadow Generator
+# Box Shadow Generator✨[Checkout Live](https://kritika243.github.io/box-shadow-generator/)
 
 A tool to generate desired box shadow and copy it's CSS directly.
 
