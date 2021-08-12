@@ -7,7 +7,7 @@ function App() {
   const [HorizontalLength, setHorizontalLength] = useState(10)
   const [VerticalLength, setVerticalLength] = useState(10)
   const [Blur, setBlur] = useState(10)
-  const [Color, setColor] = useState('black')
+  const [Color, setColor] = useState('#787878')
   const [Copied, setCopied] = useState(false)
   const [Toggle, setToggle] = useState(false)
   const val = `box-shadow: ${
