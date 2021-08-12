@@ -6,6 +6,10 @@ A tool to generate desired box shadow and copy it's CSS directly.
 
 ![](https://github.com/kritika243/box-shadow-generator/blob/main/public/screenshots/React-App.png)
 
+#
+
+![](https://github.com/kritika243/box-shadow-generator/blob/main/public/screenshots/box-shadow-generator-demo.gif)
+
 ### To run locally
 
 In the project directory, you can run:
