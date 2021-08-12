@@ -9,7 +9,10 @@ function App() {
   const [Blur, setBlur] = useState(10)
   const [Color, setColor] = useState('black')
   const [Copied, setCopied] = useState(false)
-  const val = `box-shadow: ${HorizontalLength}px ${VerticalLength}px ${Blur}px ${Color};`
+  const [Toggle, setToggle] = useState(false)
+  const val = `box-shadow: ${
+    Toggle ? 'inset' : ''
+  } ${HorizontalLength}px ${VerticalLength}px ${Blur}px ${Color};`
   return (
     <>
       <Navbar />
@@ -46,9 +49,20 @@ function App() {
             value={Color}
             onChange={(e) => setColor(e.target.value)}
           />
-          <p>
-            box-shadow: {HorizontalLength}px {VerticalLength}px {Blur}px {Color}
-          </p>
+          <br /> <br />
+          <div className='switch'>
+            <label>
+              Outline
+              <input
+                type='checkbox'
+                checked={Toggle}
+                onChange={() => setToggle(!Toggle)}
+              />
+              <span className='lever'></span>
+              Inset
+            </label>
+          </div>
+          <p>{val}</p>
           <CopyToClipboard text={val} onCopy={() => setCopied(true)}>
             <a class='waves-effect waves-light btn-small'>Copy CSS</a>
           </CopyToClipboard>
@@ -57,7 +71,9 @@ function App() {
           <div
             className='output-box'
             style={{
-              boxShadow: `${HorizontalLength}px ${VerticalLength}px ${Blur}px ${Color}`,
+              boxShadow: `${
+                Toggle ? 'inset' : ''
+              } ${HorizontalLength}px ${VerticalLength}px ${Blur}px ${Color}`,
             }}
           ></div>
         </div>
