@@ -1,11 +1,14 @@
 import './App.css'
 import { useState } from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 function App() {
   const [HorizontalLength, setHorizontalLength] = useState(10)
   const [VerticalLength, setVerticalLength] = useState(10)
   const [Blur, setBlur] = useState(10)
   const [Color, setColor] = useState('black')
+  const [Copied, setCopied] = useState(false)
+  const val = `box-shadow: ${HorizontalLength}px ${VerticalLength}px ${Blur}px ${Color};`
   return (
     <div className='App'>
       <div className='controls'>
@@ -40,9 +43,14 @@ function App() {
           value={Color}
           onChange={(e) => setColor(e.target.value)}
         />
+
         <p>
           box-shadow: {HorizontalLength}px {VerticalLength}px {Blur}px {Color}
         </p>
+        <CopyToClipboard text={val} onCopy={() => setCopied(true)}>
+          <a class='waves-effect waves-light btn-small'>Copy CSS</a>
+        </CopyToClipboard>
+        {/* {Copied ? (Copied = false) : (Copied = true)} */}
       </div>
       <div className='output'>
         <div
